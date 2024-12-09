@@ -26,7 +26,7 @@ for x,y in zip(column1, column2):
     dist = int(x) - int(y)
     distanceList.append(abs(dist))
 
-# below could be optimized with a hash map
+# TODO: below could be optimized with a hash map
 for i in column1:
     count = 0
     for j in column2:
