@@ -7,7 +7,7 @@ similarityScore = 0
 count = 0
 
 # Open the txt file
-with open('input_1.txt', 'r') as file:
+with open('dayOne\input_1.txt', 'r') as file:
     for line in file:
         # Split the line into two parts based on spaces (taking into account the 3 spaces)
         parts = line.split('   ')  # Split by 3 spaces
