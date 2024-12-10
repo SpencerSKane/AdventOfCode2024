@@ -26,12 +26,14 @@ for x,y in zip(column1, column2):
     dist = int(x) - int(y)
     distanceList.append(abs(dist))
 
-# TODO: below could be optimized with a hash map
+frequencyMap = {}  
+# elements from column2 are keys,
+# values are counts of how often each element appears in column2
+for item in column2:
+    frequencyMap[item] = frequencyMap.get(item, 0) + 1
+    
 for i in column1:
-    count = 0
-    for j in column2:
-        if i == j:
-            count += 1
+    count = frequencyMap.get(i,0)
     similarityScore += count * int(i)
 
 # Print the lists to check the output
